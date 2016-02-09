@@ -22,6 +22,7 @@ if (OpenCL_FOUND)
     target_include_directories(vhacd PRIVATE "${OpenCL_INCLUDE_DIRS}")
     target_compile_definitions(vhacd PRIVATE -DOPENCL_FOUND=1 )
     target_compile_definitions(vhacd PRIVATE -DOPENCL_CL_FILES="${PROJECT_CL_FILES}" )
+	target_link_libraries(vhacd PUBLIC ${OpenCL_LIBRARIES})
 endif()
 
 
